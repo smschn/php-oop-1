@@ -6,6 +6,7 @@ class Movie {
     public $director;
     public $genre;
     protected $original_language;
+    public $plot = null;
 
     public function __construct($titleP, $yearP, $directorP, $genreP = null)
     {
@@ -38,5 +39,16 @@ class Movie {
 
     public function getOriginalLanguage() {
         return $this->original_language;
+    }
+
+    public function setPlot($plotP) {
+        $this->plot = $plotP;
+    }
+
+    public function getPlot() {
+        if ($this->plot == null) {
+            $this->plot = 'Plot not available.';
+        }
+        return $this->plot;
     }
 }

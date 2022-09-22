@@ -1,8 +1,9 @@
 <?php
-
 require_once __DIR__ . '/movie_class.php';
 
 $movie1 = new Movie('Memento', 2000, 'Christopher Nolan', 'Thriller');
+$movie1_plot = "A man with short-term memory loss attempts to track down his wife's murderer.";
+$movie1->setPlot($movie1_plot);
 $movie2 = new Movie('The Hangover', 2009, 'Todd Phillips', 'Comedy');
 ?>
 
@@ -22,6 +23,7 @@ $movie2 = new Movie('The Hangover', 2009, 'Todd Phillips', 'Comedy');
         <li>Director: <?php echo $movie1->getDirector() ?></li>
         <li>Genre: <?php echo $movie1->getGenre() ?></li>
         <li>Original Language: <?php echo $movie1->getOriginalLanguage() ?></li>
+        <li>Plot: <?php echo $movie1->getPlot() ?></li>
     </ul>
     <h1>Second movie:</h1>
     <ul>
@@ -30,6 +32,7 @@ $movie2 = new Movie('The Hangover', 2009, 'Todd Phillips', 'Comedy');
         <li>Director: <?php echo $movie2->getDirector() ?></li>
         <li>Genre: <?php echo $movie2->getGenre() ?></li>
         <li>Original Language: <?php echo $movie2->getOriginalLanguage() ?></li>
+        <li>Plot: <?php echo $movie2->getPlot() ?></li>
     </ul>
 </body>
 </html>
