@@ -36,8 +36,8 @@ $movie3->setPlot($movie3_plot);
         <li>Year: <?php echo $movie2->year ?></li>
         <li>Director: <?php echo $movie2->director ?></li>
         <li>Genre: <?php echo $movie2->genre ?></li>
-        <li>Original Language: <?php echo $movie2->getOriginalLanguage() ?></li>
-        <li>Plot: <?php echo $movie2->getPlot() ?></li>
+        <li>Original Language: <?php echo $movie2->getOriginalLanguage() ?></li> <!-- è obbligatorio richiamare la funzione perché l'attributo è protected -->
+        <li>Plot: <?php echo $movie2->getPlot() ?></li> <!-- la funzione viene richiamata affinché appaia 'trama non disponibile'-->
     </ul>
     <h1>Third movie:</h1>
     <ul>
