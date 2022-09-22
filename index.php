@@ -3,6 +3,7 @@
 require_once __DIR__ . '/movie_class.php';
 
 $movie1 = new Movie('Memento', 2000, 'Christopher Nolan', 'Thriller');
+$movie2 = new Movie('The Hangover', 2009, 'Todd Phillips', 'Comedy');
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +22,14 @@ $movie1 = new Movie('Memento', 2000, 'Christopher Nolan', 'Thriller');
         <li>Director: <?php echo $movie1->getDirector() ?></li>
         <li>Genre: <?php echo $movie1->getGenre() ?></li>
         <li>Original Language: <?php echo $movie1->getOriginalLanguage() ?></li>
+    </ul>
+    <h1>Second movie:</h1>
+    <ul>
+        <li>Title: <?php echo $movie2->getTitle() ?></li>
+        <li>Year: <?php echo $movie2->getYear() ?></li>
+        <li>Director: <?php echo $movie2->getDirector() ?></li>
+        <li>Genre: <?php echo $movie2->getGenre() ?></li>
+        <li>Original Language: <?php echo $movie2->getOriginalLanguage() ?></li>
     </ul>
 </body>
 </html>
