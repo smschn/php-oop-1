@@ -51,4 +51,13 @@ class Movie {
         }
         return $this->plot;
     }
+
+    public function getMovieDetails() {
+        echo '<li>Title: ' . $this->title . '</li>';
+        echo '<li>Year: ' . $this->year . '</li>';
+        echo '<li>Director: ' . $this->director . '</li>';
+        echo '<li>Genre: ' . $this->genre . '</li>';
+        echo '<li>Original Language: ' . $this->original_language . '</li>';
+        echo '<li>Plot: ' . $this->plot . '</li>';
+    }
 }

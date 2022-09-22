@@ -32,21 +32,16 @@ $movie3->setPlot($movie3_plot);
     </ul>
     <h1>Second movie:</h1>
     <ul>
-        <li>Title: <?php echo $movie2->getTitle() ?></li>
-        <li>Year: <?php echo $movie2->getYear() ?></li>
-        <li>Director: <?php echo $movie2->getDirector() ?></li>
-        <li>Genre: <?php echo $movie2->getGenre() ?></li>
+        <li>Title: <?php echo $movie2->title ?></li>
+        <li>Year: <?php echo $movie2->year ?></li>
+        <li>Director: <?php echo $movie2->director ?></li>
+        <li>Genre: <?php echo $movie2->genre ?></li>
         <li>Original Language: <?php echo $movie2->getOriginalLanguage() ?></li>
         <li>Plot: <?php echo $movie2->getPlot() ?></li>
     </ul>
     <h1>Third movie:</h1>
     <ul>
-        <li>Title: <?php echo $movie3->title ?></li>
-        <li>Year: <?php echo $movie3->year ?></li>
-        <li>Directors: <?php echo $movie3->director ?></li>
-        <li>Genre: <?php echo $movie3->genre ?></li>
-        <li>Original Language: <?php echo $movie3->getOriginalLanguage() ?></li> <!-- per forza tramite funzione perché l'attributo è protected -->
-        <li>Plot: <?php echo $movie3->plot ?></li>
+        <?php echo $movie3->getMovieDetails() ?>
     </ul>
 </body>
 </html>
