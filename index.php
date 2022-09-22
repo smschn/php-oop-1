@@ -4,7 +4,12 @@ require_once __DIR__ . '/movie_class.php';
 $movie1 = new Movie('Memento', 2000, 'Christopher Nolan', 'Thriller');
 $movie1_plot = "A man with short-term memory loss attempts to track down his wife's murderer.";
 $movie1->setPlot($movie1_plot);
+
 $movie2 = new Movie('The Hangover', 2009, 'Todd Phillips', 'Comedy');
+
+$movie3 = new Movie('The Matrix', 1998, 'Lana Wachowski, Lilly Wachowski', 'Action');
+$movie3_plot = 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.';
+$movie3->setPlot($movie3_plot);
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +38,15 @@ $movie2 = new Movie('The Hangover', 2009, 'Todd Phillips', 'Comedy');
         <li>Genre: <?php echo $movie2->getGenre() ?></li>
         <li>Original Language: <?php echo $movie2->getOriginalLanguage() ?></li>
         <li>Plot: <?php echo $movie2->getPlot() ?></li>
+    </ul>
+    <h1>Third movie:</h1>
+    <ul>
+        <li>Title: <?php echo $movie3->title ?></li>
+        <li>Year: <?php echo $movie3->year ?></li>
+        <li>Directors: <?php echo $movie3->director ?></li>
+        <li>Genre: <?php echo $movie3->genre ?></li>
+        <li>Original Language: <?php echo $movie3->getOriginalLanguage() ?></li> <!-- per forza tramite funzione perché l'attributo è protected -->
+        <li>Plot: <?php echo $movie3->plot ?></li>
     </ul>
 </body>
 </html>
